@@ -21,4 +21,16 @@
      <string name="security_category">Security</string>
      <string name="other_category">Miscellaneous</string>
 
+    <!-- Dashboard style -->
+    <string name="quick_summary">Quick settings style, and customization</string>
+    <string name="bottom_summary">Powermenu, and other bottom option</string>
+    <string name="lockscreen_summary">Customize lockscreen clock and font </string>
+    <string name="mice_summary">Some special options to explore</string>
+    <string name="navigation_summary">Customize navigation bottom</string>
+    <string name="notification_summary">Reticker notifications and some customization</string>
+    <string name="status_summary">Customize statusbar clock and icon</string>
+    <string name="sound_summary">Sound settings, Pulse and other volume customization</string>
+    <string name="user_summary">Various User interface customization</string>
+    <string name="about_summary">Know about this project</string>
+
 </resources>
