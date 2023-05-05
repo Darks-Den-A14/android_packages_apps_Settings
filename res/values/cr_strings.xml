@@ -29,7 +29,7 @@
     <string name="no_storage_restrict_summary">Remove the restriction when selecting folders through Storage Access Framework. Can be convenient in some cases but may lead to privacy leaks.</string>
 
     <!-- App Title -->
-    <string name="crdroid_settings_title">crDroid Settings</string>
+    <string name="crdroid_settings_title">crDroid Hub</string>
     <string name="crdroid_settings_summary">Open goodness</string>
     <string name="reset_settings_title">Reset settings</string>
     <string name="reset_settings_message">This will reset most crdroid settings to their default values for the current user. Would you like to continue?</string>
