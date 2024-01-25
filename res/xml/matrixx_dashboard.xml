@@ -33,7 +33,7 @@
         <!-- UserInterface -->
         <com.android.settings.preferences.ui.AdaptivePreference
             android:icon="@drawable/ic_color_bucket"
-            settings:position="middle"
+            settings:position="top"
             android:title="@string/ui_title"
             android:summary="@string/ui_settings_summary"
             android:fragment="com.crdroid.settings.fragments.UserInterface" />
