@@ -227,37 +227,6 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         
         // Homepage redesign start
         // initSearchBarView();
-        
-        AppBarLayout appBarLayout = findViewById(R.id.app_bar);
-        final ExtendedFloatingActionButton fabSearch = findViewById(R.id.fabSearch);
-        FeatureFactory.getFeatureFactory()
-                .getSearchFeatureProvider()
-                .initSearchToolbar(this /* activity */, (View) fabSearch, null, SettingsEnums.SETTINGS_HOMEPAGE);
-
-        appBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
-            @Override
-            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
-                int totalScrollRange = appBarLayout.getTotalScrollRange();
-
-                if (Math.abs(verticalOffset) == totalScrollRange) {
-                    fabSearch.show();
-                    fabSearch.postOnAnimationDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            fabSearch.extend();
-                        }
-                    }, 100);
-                } else {
-                    fabSearch.shrink();
-                    fabSearch.postOnAnimationDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            fabSearch.hide();
-                        }
-                    }, 100);
-                }
-            }
-        });
 
         getLifecycle().addObserver(new HideNonSystemOverlayMixin(this));
         mCategoryMixin = new CategoryMixin(this);
@@ -276,7 +245,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
             }
         }
 	final View root = findViewById(R.id.settings_homepage_container);
-	final TextView textView = root.findViewById(R.id.user_title);
+    final TextView textView = root.findViewById(R.id.user_title);
 	final TextView homepageTitle = root.findViewById(R.id.homepage_title);
 
 	textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimensionPixelSize(R.dimen.header_text_size_contextual));
