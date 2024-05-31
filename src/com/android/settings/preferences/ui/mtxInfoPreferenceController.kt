@@ -82,7 +82,7 @@ class mtxInfoPreferenceController(context: Context) : AbstractPreferenceControll
     }
 
     private fun getMatrixxBuildStatus(releaseType: String): String {
-        return mContext.getString(if (releaseType == "official") R.string.build_is_official_title else R.string.build_is_community_title)
+        return mContext.getString(if (releaseType == "official") R.string.build_is_official_title else R.string.build_is_private_title)
     }
 
     private fun getMatrixxMaintainer(releaseType: String): String {
