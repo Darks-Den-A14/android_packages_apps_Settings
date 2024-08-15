@@ -29,13 +29,28 @@ class SystemSettings @Inject constructor(
 
     private val resolver = context.contentResolver
 
-    var headsup
-        get() = Settings.Global.getInt(
-            resolver, Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED, 1) == 1
+    var headsUp
+        get() =
+            Settings.Global.getInt(resolver, Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED, 1) == 1
         set(it) {
             Settings.Global.putInt(
-                resolver, Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED,
+                resolver,
+                Settings.Global.HEADS_UP_NOTIFICATIONS_ENABLED,
                 it.toInt()
+            )
+        }
+
+    var reTicker
+        get() =
+            Settings.System.getIntForUser(
+                resolver, Settings.System.ISLAND_NOTIFICATION, 0,
+                UserHandle.USER_CURRENT) == 1
+        set(it) {
+            Settings.System.putIntForUser(
+                resolver,
+                Settings.System.ISLAND_NOTIFICATION,
+                it.toInt(),
+                UserHandle.USER_CURRENT
             )
         }
 

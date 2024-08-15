@@ -29,10 +29,10 @@ class DanmakuServiceListener : NotificationListenerService() {
 
     private val postedNotifications = mutableMapOf<String, Long>()
 
-    var danmakuServiceInterface: DanmakuServiceInterface? = null
+    var notificationSettings: NotificationSettings? = null
 
     override fun onNotificationPosted(sbn: StatusBarNotification) {
-    if (!(danmakuServiceInterface?.danmakuNotificationMode ?: false) || !sbn.isClearable || sbn.isOngoing || sbn.getIsContentSecure()) return
+        if (notificationSettings?.notificationMode != 3 || !sbn.isClearable || sbn.isOngoing || sbn.getIsContentSecure()) return
 
         val extras = sbn.notification.extras
         val title = extras.getString(Notification.EXTRA_TITLE) ?: extras.getString(Notification.EXTRA_TITLE_BIG)
@@ -44,7 +44,7 @@ class DanmakuServiceListener : NotificationListenerService() {
 
         val time = sbn.notification.`when`
         if (danmakuText.isNotBlank() && !(postedNotifications[danmakuText] == time)) {
-            danmakuServiceInterface?.showNotificationAsOverlay(danmakuText)
+            notificationSettings?.showNotificationAsOverlay(danmakuText)
             insertPostedNotification(danmakuText, time)
         }
     }
