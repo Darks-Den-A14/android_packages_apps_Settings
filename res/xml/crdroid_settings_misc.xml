@@ -39,10 +39,16 @@
         android:summary="@string/pi_spoof_summary"
         android:defaultValue="true" />
 
+    <Preference
+         android:key="pif_json_file_preference"
+         android:title="@string/pif_spoofing_title"
+	 android:icon="@drawable/ic_google"
+         android:summary="@string/pif_spoofing_summary"/>
+
     <!-- Unlock FPS for specific games -->
     <com.crdroid.settings.preferences.SystemPropertySwitchPreference
         android:key="persist.sys.pixelprops.games"
-        android:icon="@drawable/ic_backup"
+        android:icon="@drawable/ic_gaming"
         android:title="@string/use_games_spoof_title"
         android:summary="@string/use_games_spoof_summary" />
 
