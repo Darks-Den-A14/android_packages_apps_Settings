@@ -31,6 +31,13 @@
             android:targetClass="io.chaldeaprjkt.gamespace.settings.SettingsActivity" />
     </Preference>
 
+    <!-- Unlock FPS for specific games -->
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.sys.pixelprops.games"
+        android:icon="@drawable/ic_refresh_rate"
+        android:title="@string/use_games_spoof_title"
+        android:summary="@string/use_games_spoof_summary" />
+
     <!-- Google Play Integrity -->
     <com.crdroid.settings.preferences.SystemPropertySwitchPreference
         android:key="persist.sys.pixelprops.pi"
@@ -38,20 +45,13 @@
         android:title="@string/pi_spoof_title"
         android:summary="@string/pi_spoof_summary"
         android:defaultValue="true" />
-
+    
     <!-- Custom Json file selectable for Google Play Integrity spoofing -->
     <Preference
          android:key="pif_json_file_preference"
          android:title="@string/pif_spoofing_title"
 	     android:icon="@drawable/ic_code_json"
          android:summary="@string/pif_spoofing_summary"/>
-
-    <!-- Unlock FPS for specific games -->
-    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
-        android:key="persist.sys.pixelprops.games"
-        android:icon="@drawable/ic_refresh_rate"
-        android:title="@string/use_games_spoof_title"
-        android:summary="@string/use_games_spoof_summary" />
 
     <!-- Unlimited google photos storage -->
     <com.crdroid.settings.preferences.SystemPropertySwitchPreference
