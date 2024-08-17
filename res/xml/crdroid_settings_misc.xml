@@ -49,7 +49,7 @@
     <!-- Unlock FPS for specific games -->
     <com.crdroid.settings.preferences.SystemPropertySwitchPreference
         android:key="persist.sys.pixelprops.games"
-        android:icon="@drawable/ic_gaming"
+        android:icon="@drawable/ic_refresh_rate"
         android:title="@string/use_games_spoof_title"
         android:summary="@string/use_games_spoof_summary" />
 
