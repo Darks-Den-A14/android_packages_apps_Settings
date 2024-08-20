@@ -122,12 +122,14 @@
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="hide_screen_capture_status"
         android:title="@string/hide_screen_capture_status_title"
+	android:icon="@drawable/ic_hide"
         android:summary="@string/hide_screen_capture_status_summary"
         android:defaultValue="false"/>
 
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="no_storage_restrict"
         android:title="@string/no_storage_restrict_title"
+	android:icon="@drawable/ic_lock_alert"
         android:summary="@string/no_storage_restrict_summary"
         android:defaultValue="false"/>
 
