@@ -45,7 +45,7 @@
        android:summary="@string/gameprops_summary"
        android:defaultValue="false" />
 
-   <com.android.settings.preferences.ui.AdaptivePreference
+   <Preference
        android:key="game_props_json_file_preference"
        android:title="@string/gameprops_load_json_title"
        android:icon="@drawable/ic_code_json"
