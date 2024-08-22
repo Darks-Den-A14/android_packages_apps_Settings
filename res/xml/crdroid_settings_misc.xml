@@ -78,6 +78,7 @@
     <Preference
          android:key="show_pif_properties"
          android:title="@string/show_pif_properties_title"
+	 android:icon="@drawable/ic_pif_prop"
          android:summary="@string/show_pif_properties_summary"
          android:dependency="persist.sys.pixelprops.all"/>
 
