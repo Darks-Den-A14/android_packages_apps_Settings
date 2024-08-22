@@ -18,6 +18,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+         android:title="@string/gaming_category">
+
     <!-- Gaming mode -->
     <Preference
         android:key="gaming_mode"
@@ -50,6 +53,11 @@
        android:title="@string/gameprops_load_json_title"
        android:icon="@drawable/ic_code_json"
        android:summary="@string/gameprops_load_json_summary" />
+   
+    </PreferenceCategory>
+    
+    <PreferenceCategory
+         android:title="@string/spoofing_category">
 
     <!-- Google Play Integrity -->
     <com.crdroid.settings.preferences.SystemPropertySwitchPreference
@@ -100,16 +108,10 @@
             android:targetPackage="ink.kscope.parallelspace"
             android:targetClass="ink.kscope.parallelspace.MainActivity" />
     </Preference> -->
+    </PreferenceCategory>
 
-    <!-- Three fingers swipe action -->
-    <ListPreference
-        android:key="three_fingers_swipe"
-        android:icon="@drawable/ic_three_finger_gesture"
-        android:dialogTitle="@string/three_fingers_swipe_title"
-        android:title="@string/three_fingers_swipe_title"
-        android:entries="@array/hardware_keys_action_entries"
-        android:entryValues="@array/hardware_keys_action_values"
-        android:persistent="false" />
+    <PreferenceCategory
+         android:title="@string/security_category">
 
     <com.crdroid.settings.preferences.SecureSettingSwitchPreference
         android:key="window_ignore_secure"
@@ -117,7 +119,6 @@
         android:title="@string/laboratory_ignore_window_secure_title"
         android:summary="@string/laboratory_ignore_window_secure_summary"
         android:defaultValue="false" />
-
 
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="hide_screen_capture_status"
@@ -133,6 +134,19 @@
         android:summary="@string/no_storage_restrict_summary"
         android:defaultValue="false"/>
 
+    <Preference
+    	android:key="hide_developer_status_settings"
+    	android:icon="@drawable/ic_hide"
+        android:title="@string/hide_developer_status_title"
+        android:summary="@string/hide_developer_status_summary"
+        android:fragment="com.android.settings.security.HideDeveloperStatusSettings"
+        settings:controller="com.android.settings.security.HideDeveloperStatusPreferenceController" />  
+    
+    </PreferenceCategory>
+
+    <PreferenceCategory
+         android:title="@string/other_category">
+
     <!-- Sensor block per package -->
     <Preference
         android:key="sensor_block_settings"
@@ -147,14 +161,16 @@
         android:icon="@drawable/ic_pocket"
         android:title="@string/pocket_judge_title"
         android:summary="@string/pocket_judge_summary"
-        android:defaultValue="false" />
-            
-    <Preference
-    	android:key="hide_developer_status_settings"
-    	android:icon="@drawable/ic_hide"
-        android:title="@string/hide_developer_status_title"
-        android:summary="@string/hide_developer_status_summary"
-        android:fragment="com.android.settings.security.HideDeveloperStatusSettings"
-        settings:controller="com.android.settings.security.HideDeveloperStatusPreferenceController" />    
-        
+        android:defaultValue="false" />  
+
+    <!-- Three fingers swipe action -->
+    <ListPreference
+        android:key="three_fingers_swipe"
+        android:icon="@drawable/ic_three_finger_gesture"
+        android:dialogTitle="@string/three_fingers_swipe_title"
+        android:title="@string/three_fingers_swipe_title"
+        android:entries="@array/hardware_keys_action_entries"
+        android:entryValues="@array/hardware_keys_action_values"
+        android:persistent="false" />
+    </PreferenceCategory>
 </PreferenceScreen>
