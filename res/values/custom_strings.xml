@@ -23,5 +23,8 @@
     <!-- Crdroid Maintainer -->
     <string name="crdroid_maintainer">Device Maintainer</string>
 
+    <!-- Crdroid Build Type? -->
+    <string name="crdroid_build_type">Build Type</string>
+
 </resources>
 
