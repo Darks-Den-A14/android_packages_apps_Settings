@@ -25,7 +25,6 @@
     <!-- Gaming mode -->
     <Preference
         android:key="gaming_mode"
-        android:icon="@drawable/ic_gaming"
         android:title="@string/gaming_mode_title"
         android:summary="@string/gaming_mode_summary">
 
@@ -45,14 +44,12 @@
    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
        android:key="persist.sys.gameprops.enabled"
        android:title="@string/gameprops_title"
-       android:icon="@drawable/ic_refresh_rate"
        android:summary="@string/gameprops_summary"
        android:defaultValue="false" />
 
    <Preference
        android:key="game_props_json_file_preference"
        android:title="@string/gameprops_load_json_title"
-       android:icon="@drawable/ic_code_json"
        android:summary="@string/gameprops_load_json_summary" />
    
     </PreferenceCategory>
@@ -63,7 +60,6 @@
     <!-- Google Play Integrity -->
     <com.crdroid.settings.preferences.SystemPropertySwitchPreference
         android:key="persist.sys.pixelprops.all"
-        android:icon="@drawable/ic_google"
         android:title="@string/pi_spoof_title"
         android:summary="@string/pi_spoof_summary"
         android:defaultValue="true" />
@@ -72,33 +68,29 @@
     <Preference
          android:key="pif_json_file_preference"
          android:title="@string/pif_spoofing_title"
-	     android:icon="@drawable/ic_code_json"
          android:summary="@string/pif_spoofing_summary"/>
 
     <!-- displaying current PIF properties -->
     <Preference
          android:key="show_pif_properties"
          android:title="@string/show_pif_properties_title"
-	 android:icon="@drawable/ic_pif_prop"
          android:summary="@string/show_pif_properties_summary"
          android:dependency="persist.sys.pixelprops.all"/>
 
     <!-- Unlimited google photos storage -->
     <com.crdroid.settings.preferences.SystemPropertySwitchPreference
         android:key="persist.sys.pixelprops.gphotos"
-        android:icon="@drawable/ic_backup"
         android:title="@string/use_photos_spoof_title"
         android:summary="@string/use_photos_spoof_summary"
-	android:dependency="persist.sys.pixelprops.all"
+	    android:dependency="persist.sys.pixelprops.all"
         android:defaultValue="true" />
 
     <!-- Netflix -->
     <com.crdroid.settings.preferences.SystemPropertySwitchPreference
         android:key="persist.sys.pixelprops.netflix"
-        android:icon="@drawable/ic_netflix"
         android:title="@string/netflix_spoof_title"
         android:summary="@string/netflix_spoof_summary"
-	android:dependency="persist.sys.pixelprops.all"
+	    android:dependency="persist.sys.pixelprops.all"
         android:defaultValue="false" />
 
     <!-- Google services
@@ -126,7 +118,6 @@
 
     <com.crdroid.settings.preferences.SecureSettingSwitchPreference
         android:key="window_ignore_secure"
-        android:icon="@drawable/ic_unlock_alert"
         android:title="@string/laboratory_ignore_window_secure_title"
         android:summary="@string/laboratory_ignore_window_secure_summary"
         android:defaultValue="false" />
@@ -134,20 +125,17 @@
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="hide_screen_capture_status"
         android:title="@string/hide_screen_capture_status_title"
-	android:icon="@drawable/ic_hide"
         android:summary="@string/hide_screen_capture_status_summary"
         android:defaultValue="false"/>
 
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="no_storage_restrict"
         android:title="@string/no_storage_restrict_title"
-	android:icon="@drawable/ic_lock_alert"
         android:summary="@string/no_storage_restrict_summary"
         android:defaultValue="false"/>
 
     <Preference
     	android:key="hide_developer_status_settings"
-    	android:icon="@drawable/ic_hide"
         android:title="@string/hide_developer_status_title"
         android:summary="@string/hide_developer_status_summary"
         android:fragment="com.android.settings.security.HideDeveloperStatusSettings"
@@ -161,7 +149,6 @@
     <!-- Sensor block per package -->
     <Preference
         android:key="sensor_block_settings"
-        android:icon="@drawable/ic_remote"
         android:title="@string/sensor_block_title"
         android:summary="@string/sensor_block_summary"
         android:fragment="com.crdroid.settings.fragments.misc.SensorBlock"/>
@@ -169,7 +156,6 @@
     <!-- Pocket Judge -->
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="pocket_judge"
-        android:icon="@drawable/ic_pocket"
         android:title="@string/pocket_judge_title"
         android:summary="@string/pocket_judge_summary"
         android:defaultValue="false" />  
@@ -177,11 +163,19 @@
     <!-- Three fingers swipe action -->
     <ListPreference
         android:key="three_fingers_swipe"
-        android:icon="@drawable/ic_three_finger_gesture"
         android:dialogTitle="@string/three_fingers_swipe_title"
         android:title="@string/three_fingers_swipe_title"
         android:entries="@array/hardware_keys_action_entries"
         android:entryValues="@array/hardware_keys_action_values"
         android:persistent="false" />
+    
+    <Preference
+        android:key="crdroid_changelog"
+        android:title="@string/changelog_crdroid_title"
+        android:summary="@string/changelog_crdroid_summary">
+        <intent android:action="android.intent.action.MAIN"
+             android:targetPackage="com.android.settings"
+             android:targetClass="com.crdroid.settings.fragments.about.ChangelogActivity"/>
+    </Preference>
     </PreferenceCategory>
 </PreferenceScreen>
