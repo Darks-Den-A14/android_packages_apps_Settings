@@ -31,8 +31,7 @@
             android:defaultValue="0"
             android:max="3"
             settings:min="0"
-            settings:interval="1"
-            settings:position="solo"/>
+            settings:interval="1"/>
 
         <com.android.settingslib.widget.FooterPreference
             android:key="display_engine_mode_footer"
