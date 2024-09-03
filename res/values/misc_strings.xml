@@ -38,4 +38,8 @@
     <string name="statusbar_top_padding">Top padding</string>
     <string name="statusbar_left_padding">Left padding</string>
     <string name="statusbar_right_padding">Right padding</string>
+
+    <!-- Volume Haptic feedback -->
+    <string name="haptic_feedback_category">Haptic Feedback Settings</string>
+    <string name="volume_panel_haptic_feedback_title">Vibrate on changing volume</string>
 </resources>
