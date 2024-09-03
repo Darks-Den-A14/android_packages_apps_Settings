@@ -70,7 +70,7 @@ class GameSession @Inject constructor(
             systemSettings.headsup = false
         }
         if (appSettings.noThreeScreenshot) {
-            systemSettings.threeScreenshot = 0
+            systemSettings.threeScreenshot = false
         }
         if (appSettings.noAdbEnabled) {
             systemSettings.adbEnabled = false
@@ -89,7 +89,7 @@ class GameSession @Inject constructor(
             orig.headsup?.let { systemSettings.headsup = it }
         }
         if (appSettings.noThreeScreenshot) {
-            systemSettings.threeScreenshot = orig.threeScreenshot
+            orig.threeScreenshot?.let { systemSettings.threeScreenshot = it }
         }
         if (appSettings.noAdbEnabled) {
             orig.adbEnabled?.let { systemSettings.adbEnabled = it }
