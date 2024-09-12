@@ -20,6 +20,7 @@
      <string name="spoofing_category">Spoofing</string>
      <string name="security_category">Security</string>
      <string name="other_category">Miscellaneous</string>
+     <string name="B&R_category">Backup & Restore</string>
 
     <!-- Dashboard style -->
     <string name="quick_summary">Quick settings style, and customization</string>
@@ -42,4 +43,10 @@
     <!-- Volume Haptic feedback -->
     <string name="haptic_feedback_category">Haptic Feedback Settings</string>
     <string name="volume_panel_haptic_feedback_title">Vibrate on changing volume</string>
+
+    <!-- Backup/Restore settings -->
+    <string name="backup_settings_title">Backup CrDroid Hub Settings</string>
+    <string name="backup_settings_summary">Save your CrDroid Hub settings to a file</string>
+    <string name="restore_settings_title">Restore CrDroid Hub Settings</string>
+    <string name="restore_settings_summary">Restore your CrDroid Hub settings from a backup file</string>
 </resources>

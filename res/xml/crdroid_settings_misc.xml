@@ -176,4 +176,17 @@
              android:targetClass="com.crdroid.settings.fragments.about.ChangelogActivity"/>
     </Preference>
     </PreferenceCategory>
+
+    <PreferenceCategory
+         android:title="@string/B&R_category">
+    <Preference
+        android:key="backup_personalization_settings"
+        android:title="@string/backup_settings_title"
+        android:summary="@string/backup_settings_summary"/>
+
+    <Preference
+        android:key="restore_personalization_settings"
+        android:title="@string/restore_settings_title"
+        android:summary="@string/restore_settings_summary"/>
+    </PreferenceCategory>
 </PreferenceScreen>
