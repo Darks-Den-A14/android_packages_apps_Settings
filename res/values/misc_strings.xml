@@ -20,7 +20,7 @@
      <string name="spoofing_category">Spoofing</string>
      <string name="security_category">Security</string>
      <string name="other_category">Miscellaneous</string>
-     <string name="B&R_category">Backup & Restore</string>
+     <string name="BR_category">Backup/Restore</string>
 
     <!-- Dashboard style -->
     <string name="quick_summary">Quick settings style, and customization</string>

@@ -178,7 +178,7 @@
     </PreferenceCategory>
 
     <PreferenceCategory
-         android:title="@string/B&R_category">
+         android:title="@string/BR_category">
     <Preference
         android:key="backup_personalization_settings"
         android:title="@string/backup_settings_title"

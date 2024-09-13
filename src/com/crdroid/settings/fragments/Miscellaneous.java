@@ -47,7 +47,6 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 import com.crdroid.settings.preferences.CustomSeekBarPreference;
 import com.crdroid.settings.preferences.GlobalSettingSwitchPreference;
-import com.crdroid.settings.preferences.SystemPropertyListPreference;
 import com.crdroid.settings.preferences.SecureSettingListPreference;
 import com.crdroid.settings.preferences.SecureSettingSwitchPreference;
 import com.crdroid.settings.preferences.SystemSettingListPreference;
