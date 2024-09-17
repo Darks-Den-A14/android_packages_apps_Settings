@@ -128,4 +128,12 @@
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.SimpleBuildNumberPreferenceController"/>
 
+    <!-- crdroid Custom Source  -->
+    <Preference
+        android:key="crdroid_custom_source"
+        android:title="@string/crdroid_custom_source"
+        android:summary="DarkPhoenix"
+        settings:enableCopying="true"
+        settings:controller="com.android.settings.deviceinfo.firmwareversion.crdroidCustomPreferenceController"/>
+
 </PreferenceScreen>
