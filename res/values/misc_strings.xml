@@ -42,4 +42,8 @@
     <!-- Volume Haptic feedback -->
     <string name="haptic_feedback_category">Haptic Feedback Settings</string>
     <string name="volume_panel_haptic_feedback_title">Vibrate on changing volume</string>
+
+    <!-- Compact QS Media Player-->
+    <string name="qs_compact_media_player_mode_title">Compact QS Media player</string>
+    <string name="qs_compact_media_player_mode_summary">Enable compact mode for QuickSettings media player (restart systemui)</string>
 </resources>
