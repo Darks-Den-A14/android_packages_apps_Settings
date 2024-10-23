@@ -61,7 +61,6 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
 
     public static final String TAG = "Miscellaneous";
 
-    private static final String POCKET_JUDGE = "pocket_judge";
     private static final String SYS_GAMES_SPOOF = "persist.sys.pixelprops.games";
     private static final String SYS_PROP_OPTIONS = "persist.sys.pixelprops.all";
     private static final String SYS_PHOTOS_SPOOF = "persist.sys.pixelprops.gphotos";
@@ -71,7 +70,6 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
     private static final String KEY_GAME_PROPS_JSON_FILE_PREFERENCE = "game_props_json_file_preference";
     private static final String KEY_PIF_JSON_FILE_PREFERENCE = "pif_json_file_preference";
 
-    private Preference mPocketJudge;
     private Preference mPropOptions;
 
     private Preference mPifJsonFilePreference;
@@ -95,11 +93,6 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
         mGamePropsSpoof.setOnPreferenceChangeListener(this);
         mPropOptions = (Preference) findPreference(SYS_PROP_OPTIONS);
         mPropOptions.setOnPreferenceChangeListener(this);
-        mPocketJudge = (Preference) prefScreen.findPreference(POCKET_JUDGE);
-        boolean mPocketJudgeSupported = res.getBoolean(
-                com.android.internal.R.bool.config_pocketModeSupported);
-        if (!mPocketJudgeSupported)
-            prefScreen.removePreference(mPocketJudge);
     }
 
     @Override
@@ -257,8 +250,6 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
     public static void reset(Context mContext) {
         ContentResolver resolver = mContext.getContentResolver();
         Settings.System.putIntForUser(resolver,
-                Settings.System.POCKET_JUDGE, 0, UserHandle.USER_CURRENT);
-        Settings.System.putIntForUser(resolver,
                 Settings.System.THREE_FINGER_GESTURE, 0, UserHandle.USER_CURRENT);
         LineageSettings.System.putIntForUser(resolver,
                 LineageSettings.System.AUTO_BRIGHTNESS_ONE_SHOT, 0, UserHandle.USER_CURRENT);
@@ -282,12 +273,6 @@ public class Miscellaneous extends SettingsPreferenceFragment implements
                 @Override
                 public List<String> getNonIndexableKeys(Context context) {
                     List<String> keys = super.getNonIndexableKeys(context);
-                    final Resources res = context.getResources();
-
-                    boolean mPocketJudgeSupported = res.getBoolean(
-                            com.android.internal.R.bool.config_pocketModeSupported);
-                    if (!mPocketJudgeSupported)
-                        keys.add(POCKET_JUDGE);
 
                     return keys;
                 }

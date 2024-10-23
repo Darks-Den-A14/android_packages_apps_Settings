@@ -161,12 +161,12 @@
         android:summary="@string/sensor_block_summary"
         android:fragment="com.crdroid.settings.fragments.misc.SensorBlock"/>
 
-    <!-- Pocket Judge -->
+    <!-- Pocket Judge 
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="pocket_judge"
         android:title="@string/pocket_judge_title"
         android:summary="@string/pocket_judge_summary"
-        android:defaultValue="false" />  
+        android:defaultValue="false" /> --> 
 
     <!-- Three-fingers-swipe to screenshot -->
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
