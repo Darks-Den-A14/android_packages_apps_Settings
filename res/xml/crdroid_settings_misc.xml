@@ -57,11 +57,19 @@
     <PreferenceCategory
          android:title="@string/spoofing_category">
 
+
+    <!-- Google Play Integrity -->
+    <com.crdroid.settings.preferences.SystemPropertySwitchPreference
+        android:key="persist.sys.pixelprops.pi"
+        android:title="@string/pi_spoof_title"
+        android:summary="@string/pi_spoof_summary"
+        android:defaultValue="true" />
+
     <!-- Google Play Integrity -->
     <com.crdroid.settings.preferences.SystemPropertySwitchPreference
         android:key="persist.sys.pixelprops.all"
-        android:title="@string/pi_spoof_title"
-        android:summary="@string/pi_spoof_summary"
+        android:title="@string/all_spoof_title"
+        android:summary="@string/all_spoof_summary"
         android:defaultValue="true" />
     
     <!-- Custom Json file selectable for Google Play Integrity spoofing -->
